@@ -518,9 +518,9 @@ export default function App() {
   }
 
   return (
-    <div style={{ background: C.bg, height: "100vh", maxWidth: 480, margin: "0 auto", display: "grid", gridTemplateRows: "auto 1fr auto", overflow: "hidden" }}>
+    <div style={{ background: C.bg, height: "100vh", maxWidth: 480, margin: "0 auto", display: "grid", gridTemplateRows: "auto 1fr auto" }}>
       <TopBar isAdmin={isAdmin} />
-      <div style={{ overflow: "hidden" }}>
+      <div style={{ overflow: "auto", scrollbarWidth: "none" }}>
         {screen()}
       </div>
       <BottomNav tab={tab} setTab={setTab} isAdmin={isAdmin} />
