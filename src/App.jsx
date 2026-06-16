@@ -518,12 +518,14 @@ export default function App() {
   }
 
   return (
-    <div style={{ background: C.bg, minHeight: "100vh", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column" }}>
+    <div style={{ background: C.bg, minHeight: "100vh", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column", position: "relative" }}>
       <TopBar isAdmin={isAdmin} />
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minHeight: 0 }}>
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minHeight: 0, paddingBottom: 56 }}>
         {screen()}
       </div>
-      <BottomNav tab={tab} setTab={setTab} isAdmin={isAdmin} />
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, maxWidth: 480, margin: "0 auto", width: "100%" }}>
+        <BottomNav tab={tab} setTab={setTab} isAdmin={isAdmin} />
+      </div>
     </div>
   );
 }
