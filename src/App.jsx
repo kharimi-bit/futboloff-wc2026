@@ -93,7 +93,7 @@ function TopBar({ isAdmin }) {
 
 function BottomNav({ tab, setTab, isAdmin }) {
   const tabs = isAdmin
-    ? [["home", "⚽", "Главная"], ["matches", "⚙️", "Счета"], ["lb", "🏆", "Рейтинг"], ["users", "👥", "Люди"]]
+    ? [["home", "⚽", "Главная"], ["preds", "✏️", "Прогнозы"], ["matches", "⚙️", "Счета"], ["lb", "🏆", "Рейтинг"], ["users", "👥", "Люди"]]
     : [["home", "⚽", "Главная"], ["preds", "✏️", "Прогнозы"], ["lb", "🏆", "Рейтинг"]];
   return (
     <div style={{ display: "flex", background: C.surface, flexShrink: 0, borderTop: `1px solid ${C.border}` }}>
