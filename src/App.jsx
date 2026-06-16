@@ -518,9 +518,9 @@ export default function App() {
   }
 
   return (
-    <div style={{ background: C.bg, minHeight: "100vh", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column" }}>
+    <div style={{ background: C.bg, height: "100vh", maxWidth: 480, margin: "0 auto", display: "grid", gridTemplateRows: "auto 1fr auto", overflow: "hidden" }}>
       <TopBar isAdmin={isAdmin} />
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minHeight: 0 }}>
+      <div style={{ overflow: "hidden" }}>
         {screen()}
       </div>
       <BottomNav tab={tab} setTab={setTab} isAdmin={isAdmin} />
